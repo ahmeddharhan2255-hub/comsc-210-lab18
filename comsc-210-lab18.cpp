@@ -31,10 +31,11 @@ public:
     };
 
     void display();
-    void prepend();
+    void prepend(string movie, double rating);
 
-    double generateRating()            {return (rand() % 41 + 10) / 10.0;}
 };
+
+double generateRating();
 
 int main(){
     srand(time(0));
@@ -49,11 +50,17 @@ int main(){
     }
 
     for(int i = 0; i < SIZE; i++){
+
+        movies.push_back(Movie(movieList[i]));
+
         for(int j = 0; j < SIZE - 1; j++){
             string tempMovie;
-            movies.push_back(Movie(movieList[i]));
+            double tempRating;
 
             getline(file,tempMovie);
+            tempRating = generateRating();
+
+            prepend(tempMovie, tempRating);
             
         }
     }
@@ -63,3 +70,4 @@ int main(){
     return 0;
 }
 
+double generateRating() {return (rand() % 41 + 10) / 10.0;};
