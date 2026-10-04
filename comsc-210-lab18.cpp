@@ -31,7 +31,12 @@ public:
     };
 
     void display();
-    void prepend(string movie, double rating);
+    void prepend(string movie, double rating){
+        Node * newRating = new Node;
+
+        
+
+    }
 
 };
 
