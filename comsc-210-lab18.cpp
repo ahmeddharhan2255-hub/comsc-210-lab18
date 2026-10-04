@@ -29,7 +29,7 @@ public:
     void display();
     void prepend();
 
-    double rating();            {return (rand() / (5.0)) + 1.0}
+    double rating()            {return (rand()  (5.0)) + 1.0;}
 };
 
 int main(){
