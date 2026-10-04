@@ -21,11 +21,19 @@ private:
     Node* head;
 
 public:
+    Movie(){ 
+        head = nullptr;
+    }
+
+
     void display();
     void prepend();
+
+    double rating();            {return (rand() / (5.0)) + 1.0}
 };
 
 int main(){
+    srand(time(0));
 
     vector<Movie> movies(SIZE);
 
@@ -37,7 +45,7 @@ int main(){
     }
 
     for(int i = 0; i < SIZE; i++){
-        
+
     }
     
     file.close();
