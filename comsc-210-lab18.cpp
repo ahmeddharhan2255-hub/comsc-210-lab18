@@ -2,7 +2,12 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+#include <vector>
+
 using namespace std;
+
+const int SIZE = 4;
 
 struct Node{
     double rating;
@@ -21,6 +26,17 @@ public:
 };
 
 int main(){
+
+    vector<Movie> movies(SIZE);
+
+    ifstream file("input.txt");
+
+    if(!file.is_open()){
+        cout << "Error! File could not be opened!" << endl;
+        return 1;
+    }
+
+    
 
 
     return 0;
