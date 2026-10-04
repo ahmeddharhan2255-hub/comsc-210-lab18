@@ -4,6 +4,8 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <random>
+#include <iomanip>
 
 using namespace std;
 
@@ -31,13 +33,13 @@ public:
     void display();
     void prepend();
 
-    double generateRating()            {return }
+    double generateRating()            {return (rand() % 41 + 10) / 10.0;}
 };
 
 int main(){
     srand(time(0));
 
-    vector<Movie> movies(SIZE);
+    vector<Movie> movies;
 
     ifstream file("input.txt");
 
@@ -47,7 +49,13 @@ int main(){
     }
 
     for(int i = 0; i < SIZE; i++){
-        movies.push_back(Movie(movieList[i]));
+        for(int j = 0; j < SIZE - 1; j++){
+            string tempMovie;
+            movies.push_back(Movie(movieList[i]));
+
+            getline(file,tempMovie);
+            
+        }
     }
     
     file.close();
