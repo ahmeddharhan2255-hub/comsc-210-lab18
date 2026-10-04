@@ -6,6 +6,8 @@
 #include <vector>
 #include <random>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -30,27 +32,33 @@ public:
         head = nullptr;
     };
 
-    void display();
+    void display(){
+        Node * current = head;
+
+        while(current != nullptr){
+            
+        }
+    }
+
     void prepend(string newReview, double newRating){
-        Node * Rating = new Node;
+        Node * newNode = new Node;
 
-        Rating->rating = newRating;
-        Rating->review = newReview;
+        newNode->rating = newRating;
+        newNode->review = newReview;
 
-        Rating->next = head;
+        newNode->next = head;
 
-        Rating = head;
+        head = newNode;
 
     }
 
 };
 
 double generateRating();
+double averageRating();
 
 int main(){
 
-    Movie movie1;
-    
     srand(time(0));
 
     vector<Movie> movies;
@@ -73,7 +81,7 @@ int main(){
             getline(file,tempMovie);
             tempRating = generateRating();
 
-            prepend(tempMovie, tempRating);
+            movies[i].prepend(tempMovie, tempRating);
             
         }
     }
@@ -84,3 +92,7 @@ int main(){
 }
 
 double generateRating() {return (rand() % 41 + 10) / 10.0;};
+
+double averageRating(){
+
+}
