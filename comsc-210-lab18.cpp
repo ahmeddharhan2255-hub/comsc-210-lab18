@@ -4,15 +4,16 @@
 #include <string>
 using namespace std;
 
-class Node{
-    int rating;
+struct Node{
+    double rating;
     string review;
+    Node* next;
 };
 
 class Movie {
 private:
     string title;
-    struct Node* next;
+    Node* head;
 
 public:
     void display();
@@ -24,3 +25,4 @@ int main(){
 
     return 0;
 }
+
