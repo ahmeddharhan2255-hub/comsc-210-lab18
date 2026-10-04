@@ -9,6 +9,8 @@ using namespace std;
 
 const int SIZE = 4;
 
+string movieList[SIZE] = {"Lord Of the Rings","The Godfather","Star Wars","Jurassic Park"};
+
 struct Node{
     double rating;
     string review;
@@ -21,15 +23,15 @@ private:
     Node* head;
 
 public:
-    Movie(){ 
+    Movie(string movieName){
+        title = movieName; 
         head = nullptr;
-    }
-
+    };
 
     void display();
     void prepend();
 
-    double rating()            {return }
+    double generateRating()            {return }
 };
 
 int main(){
@@ -45,7 +47,7 @@ int main(){
     }
 
     for(int i = 0; i < SIZE; i++){
-
+        Movie(movieList[i]);
     }
     
     file.close();
