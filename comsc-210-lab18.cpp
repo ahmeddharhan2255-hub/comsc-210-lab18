@@ -47,7 +47,7 @@ int main(){
     }
 
     for(int i = 0; i < SIZE; i++){
-        Movie(movieList[i]);
+        movies.push_back(Movie(movieList[i]));
     }
     
     file.close();
