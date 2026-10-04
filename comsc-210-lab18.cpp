@@ -31,10 +31,15 @@ public:
     };
 
     void display();
-    void prepend(string movie, double rating){
-        Node * newRating = new Node;
+    void prepend(string newReview, double newRating){
+        Node * Rating = new Node;
 
-        
+        Rating->rating = newRating;
+        Rating->review = newReview;
+
+        Rating->next = head;
+
+        Rating = head;
 
     }
 
@@ -43,6 +48,9 @@ public:
 double generateRating();
 
 int main(){
+
+    Movie movie1;
+    
     srand(time(0));
 
     vector<Movie> movies;
