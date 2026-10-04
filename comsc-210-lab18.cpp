@@ -36,8 +36,11 @@ int main(){
         return 1;
     }
 
+    for(int i = 0; i < SIZE; i++){
+        
+    }
     
-
+    file.close();
 
     return 0;
 }
