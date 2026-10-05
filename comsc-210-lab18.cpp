@@ -33,11 +33,24 @@ public:
     };
 
     void display(){
+
+        cout << title << endl;
+        int count = 0;
+        double total = 0;
         Node * current = head;
 
         while(current != nullptr){
             
+            cout << "Review #" << count + 1;
+            cout << current->rating << current->review << endl;
+
+            total += current->rating;
+
+            current = current->next;
+            count++;
         }
+
+        cout << "Average: " << total / count;
     }
 
     void prepend(string newReview, double newRating){
@@ -55,7 +68,6 @@ public:
 };
 
 double generateRating();
-double averageRating();
 
 int main(){
 
@@ -92,7 +104,3 @@ int main(){
 }
 
 double generateRating() {return (rand() % 41 + 10) / 10.0;};
-
-double averageRating(){
-
-}
