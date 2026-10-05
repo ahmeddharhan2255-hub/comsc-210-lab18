@@ -27,11 +27,14 @@ private:
     Node* head;
 
 public:
+    //Creates movie object with moviename
+    //initalizes to 0
     Movie(string movieName){
         title = movieName; 
         head = nullptr;
     };
 
+    //Deconstructor that deletes memory
     ~Movie(){
 
         while(head != nullptr){
@@ -42,6 +45,9 @@ public:
 
     }
 
+    //Copy constructor
+    //Creates a new movie and copies from linked list
+    //from another
     Movie(const Movie& otherfilm){
         title = otherfilm.title;
         head = nullptr;
@@ -72,6 +78,10 @@ public:
         }
 
 }
+
+    //Copy assignment that assigns one movie to another and its data
+    //and reassignment
+    //arguments(movie copying from)
     Movie& operator=(const Movie& othermovie){
 
         if(this == &othermovie){
