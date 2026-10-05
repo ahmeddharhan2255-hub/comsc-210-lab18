@@ -43,6 +43,8 @@ public:
         cout << "Memory deallocated" << endl;
     }
 
+    void()
+
     void display(){
 
         cout << title << endl;
@@ -105,20 +107,18 @@ int main(){
             tempRating = generateRating();
 
             movies[i].prepend(tempMovie, tempRating);
-            
+        
         }
     }
     
     file.close();
 
     for(int i = 0; i < SIZE; i++){
-        
+        movies[i].display();
+        cout << endl;
     }
 
     return 0;
 }
 
 double generateRating() {return (rand() % 41 + 10) / 10.0;};
-
-
-
