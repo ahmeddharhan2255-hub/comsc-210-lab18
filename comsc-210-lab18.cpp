@@ -47,13 +47,20 @@ public:
         title = otherfilm.title;
         head = nullptr;
 
+        double rating;
+        string review;
+        Node* next;
+
         Node* current = otherfilm.head;
 
         while(current != nullptr){
 
             Node * newNode = new Node;
 
-            newNode->rating = 
+            newNode->rating = rating;
+            newNode->review = review;
+
+            current = current->next;
             
         }
 
