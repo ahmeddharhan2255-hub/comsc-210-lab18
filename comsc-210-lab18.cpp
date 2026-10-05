@@ -56,8 +56,7 @@ public:
 
             newNode->rating = current->rating;
             newNode->review = current->review;
-
-            current = current->next;
+            newNode->next = nullptr;
 
             if(head == nullptr){
                 head = newNode;
