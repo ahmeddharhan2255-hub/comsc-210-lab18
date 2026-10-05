@@ -73,9 +73,9 @@ public:
         }
 
 }
-    Movie& operator=(const Movie& otherfilm){
+    Movie& operator=(const Movie& othermovie){
 
-        if(this == &otherfilm){
+        if(this == &othermovie){
             return *this;
         }
 
@@ -85,11 +85,17 @@ public:
             delete temp;
         }
 
-        title = otherfilm.title;
+        title = othermovie.title;
         head = nullptr;
 
-        
-    }
+        Node* current = othermovie.head;
+        Node* tail = nullptr;
+
+        while(current != nullptr){
+
+            Node * newNode = newNode;
+        };
+    }   
 
     void display(){
 
