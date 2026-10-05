@@ -93,8 +93,25 @@ public:
 
         while(current != nullptr){
 
-            Node * newNode = newNode;
-        };
+            Node * newNode = new Node;
+
+            newNode->rating = current->rating;
+            newNode->review = current->review;
+            newNode->next = nullptr;
+
+            if(head==nullptr){
+                head = newNode;
+            }
+            else{
+                tail->next = newNode;
+            }
+
+            tail = newNode;
+
+            current = current -> next;
+        }
+
+        return *this;
     }   
 
     void display(){
