@@ -40,7 +40,6 @@ public:
             delete temp;
         }
 
-        cout << "Memory deallocated" << endl;
     }
 
     Movie(const Movie& otherfilm){
@@ -114,6 +113,9 @@ public:
         return *this;
     }   
 
+    //display function which shows linked lists and nodes 
+    //arguments: none
+    //returns nothing
     void display(){
 
         cout << title << endl;
@@ -124,7 +126,7 @@ public:
         while(current != nullptr){
             
             cout << "Review #" << count + 1;
-            cout << current->rating << current->review << endl;
+            cout << " " << current->rating << " " << current->review << endl;
 
             total += current->rating;
 
@@ -134,8 +136,13 @@ public:
 
         cout << "Average: " << total / count;
 
+        cout << endl;
+
     }
 
+    //Function prepends a node into each linked list in vector
+    //arguments(Review and Rating)
+    //Returns nothing
     void prepend(string newReview, double newRating){
         Node * newNode = new Node;
 
@@ -150,6 +157,7 @@ public:
 
 };
 
+//Function Prototype
 double generateRating();
 
 int main(){
@@ -165,6 +173,8 @@ int main(){
         return 1;
     }
 
+    //Goes through text file line by line and adds
+    //reviews with respect to film
     for(int i = 0; i < SIZE; i++){
 
         movies.push_back(Movie(movieList[i]));
@@ -183,6 +193,7 @@ int main(){
     
     file.close();
 
+    //Displays linked lists with respect to size
     for(int i = 0; i < SIZE; i++){
         movies[i].display();
         cout << endl;
@@ -191,4 +202,7 @@ int main(){
     return 0;
 }
 
+//Function: generateRating:
+//arguments: none
+//returns rand double between 1.0 and 5.0
 double generateRating() {return (rand() % 41 + 10) / 10.0;};
