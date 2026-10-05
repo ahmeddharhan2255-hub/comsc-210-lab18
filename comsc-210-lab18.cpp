@@ -32,6 +32,11 @@ public:
         head = nullptr;
     };
 
+    ~Movie(){
+
+        cout << "Memory deallocated" << endl;
+    }
+
     void display(){
 
         cout << title << endl;
