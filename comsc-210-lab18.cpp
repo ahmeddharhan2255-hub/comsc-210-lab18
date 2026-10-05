@@ -34,6 +34,12 @@ public:
 
     ~Movie(){
 
+        while(head != nullptr){
+            Node *temp = head;
+            head = head->next;
+            delete temp;
+        }
+
         cout << "Memory deallocated" << endl;
     }
 
