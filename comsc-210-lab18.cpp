@@ -111,6 +111,10 @@ int main(){
     
     file.close();
 
+    for(int i = 0; i < SIZE; i++){
+        
+    }
+
     return 0;
 }
 
