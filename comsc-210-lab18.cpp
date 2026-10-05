@@ -104,3 +104,6 @@ int main(){
 }
 
 double generateRating() {return (rand() % 41 + 10) / 10.0;};
+
+
+
