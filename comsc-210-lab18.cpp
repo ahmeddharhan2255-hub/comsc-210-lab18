@@ -43,6 +43,22 @@ public:
         cout << "Memory deallocated" << endl;
     }
 
+    Movie(const Movie& otherfilm){
+        title = otherfilm.title;
+        head = nullptr;
+
+        Node* current = otherfilm.head;
+
+        while(current != nullptr){
+
+            Node * newNode = new Node;
+
+            newNode->rating = 
+            
+        }
+
+    }
+
     void display(){
 
         cout << title << endl;
@@ -62,7 +78,7 @@ public:
         }
 
         cout << "Average: " << total / count;
-        
+
     }
 
     void prepend(string newReview, double newRating){
