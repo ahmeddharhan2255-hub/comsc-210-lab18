@@ -47,24 +47,33 @@ public:
         title = otherfilm.title;
         head = nullptr;
 
-        double rating;
-        string review;
-        Node* next;
-
+        Node* tail = nullptr;
         Node* current = otherfilm.head;
 
         while(current != nullptr){
 
             Node * newNode = new Node;
 
-            newNode->rating = rating;
-            newNode->review = review;
+            newNode->rating = current->rating;
+            newNode->review = current->review;
+
+            current = current->next;
+
+            if(head == nullptr){
+                head = newNode;
+            }
+
+            else{
+                tail->next = newNode;
+            }
+
+            tail = newNode;
 
             current = current->next;
             
         }
 
-    }
+}
 
     void display(){
 
