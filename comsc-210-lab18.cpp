@@ -43,8 +43,6 @@ public:
         cout << "Memory deallocated" << endl;
     }
 
-    void()
-
     void display(){
 
         cout << title << endl;
@@ -64,6 +62,7 @@ public:
         }
 
         cout << "Average: " << total / count;
+        
     }
 
     void prepend(string newReview, double newRating){
