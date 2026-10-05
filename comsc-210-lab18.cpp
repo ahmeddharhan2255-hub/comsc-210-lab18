@@ -85,6 +85,9 @@ public:
             delete temp;
         }
 
+        title = otherfilm.title;
+        head = nullptr;
+
         
     }
 
