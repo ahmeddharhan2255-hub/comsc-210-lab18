@@ -73,6 +73,20 @@ public:
         }
 
 }
+    Movie& operator=(const Movie& otherfilm){
+
+        if(this == &otherfilm){
+            return *this;
+        }
+
+        while(head != nullptr){
+            Node* temp = head;
+            head = head->next;
+            delete temp;
+        }
+
+        
+    }
 
     void display(){
 
